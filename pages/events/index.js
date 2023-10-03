@@ -4,6 +4,7 @@ import EventList from '@/components/events/event-list';
 import EventsSearch from '@/components/events/events-search';
 import { Fragment } from 'react';
 import { getAllEvents } from '@/helpers/api-util';
+import NewsletterRegistration from '@/components/input/newsletter-registration';
 
 function AllEventsPage(props) {
     const router = useRouter();
@@ -20,7 +21,6 @@ function AllEventsPage(props) {
                 <title>All Events</title>
                 <meta name="description" content="find a lot of great event that allow you to evolve..." />
             </Head>
-            <EventsSearch onSearch={findEventsHandler} />
             <EventList items={events} />
         </Fragment>
     );
